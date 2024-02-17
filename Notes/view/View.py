@@ -1,20 +1,22 @@
 from abc import ABC, abstractmethod
 
+from Note import Note
+
 
 class View(ABC):
     
     @abstractmethod
-    def Menu():
+    def menu() -> Note:
         pass
 
     @abstractmethod
-    def Create():
+    def create():
         pass
 
     @abstractmethod
-    def Find():
+    def find():
         pass
 
     @abstractmethod
-    def ChangeLanguage():
+    def change_language():
         pass

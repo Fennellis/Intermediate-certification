@@ -4,25 +4,29 @@ from abc import ABC, abstractmethod
 class IController(ABC):
 
     @abstractmethod
-    def Menu(self):
+    def menu(self):
         pass
 
     @abstractmethod
-    def Create():
+    def create():
         pass
 
     @abstractmethod
-    def Save():
+    def edit():
         pass
 
     @abstractmethod
-    def Show():
+    def delete():
         pass
 
     @abstractmethod
-    def Edit():
+    def show():
+        pass
+    
+    @abstractmethod
+    def find():
         pass
 
     @abstractmethod
-    def Delete():
+    def change_language():
         pass

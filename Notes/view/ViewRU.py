@@ -3,7 +3,7 @@ from view.View import View
 
 
 class ViewRU(View):
-    def Menu():
+    def menu():
         print("Выберите команду:\n" +
               "1. Создать заметку\n" + 
               "2. Изменить заметку\n" + 
@@ -13,13 +13,13 @@ class ViewRU(View):
               "6. Сменить язык\n"
               "0. Выход")
     
-    def Create(max_id):
+    def create(max_id):
         title = input("Введите заголовок: ")
         body = input("Введите текст: ")
         return Note(max_id + 1, title, body)
     
-    def Find():
+    def find():
         pass
 
-    def ChangeLanguage():
+    def change_language():
         print("Доступные языки: ")

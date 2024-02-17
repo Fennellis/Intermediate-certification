@@ -3,7 +3,7 @@ from view.View import View
 
 
 class ViewEN(View):
-    def Menu():
+    def menu():
         print("Select command:\n" +
                 "1. Create a note\n" +
                 "2. Edit note\n" +
@@ -13,13 +13,13 @@ class ViewEN(View):
                 "6. Change language\n" +
                 "0. Exit")
     
-    def Create(max_id):
+    def create(max_id):
         title = input("Enter title: ")
         body = input("Enter text: ")
         return Note(max_id + 1, title, body)
     
-    def Find():
+    def find():
         pass
     
-    def ChangeLanguage():
+    def change_language():
         print("Available languages: ")

@@ -1,24 +1,34 @@
+import datetime
+
 class Note:
-    def __init__(self, id, title, body):
+    def __init__(self, id, title, body, time = datetime.datetime.now()):
         self.__id = id
+        self.__time = time
         self.__title = title
         self.__body = body
 
     @property
     def id(self):
         return self.__id
+    
+    @property
+    def time(self):
+        return self.__time
+    @property
+    def time(self, time):
+        self.__time = time
     @property
     def title(self):
-        return self.title
-    @property.setter
+        return self.__title
+    @property
     def title(self, title):
-        self.title = title
+        self.__title = title
     @property
     def body(self):
-        return self.body
-    @property.setter
+        return self.__body
+    @property
     def body(self, body):
-        self.body = body
+        self.__body = body
     
-    def ToString(self):
-        return f"{self.__title}\n{self.__body}"
+    def to_string(self):
+        return f"{self.__id}\n{self.__time}\n{self.__title}\n{self.__body}"
