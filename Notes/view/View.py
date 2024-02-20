@@ -1,10 +1,12 @@
 from abc import ABC, abstractmethod
 
+from Note import Note
 
-class IController(ABC):
 
+class View(ABC):
+    
     @abstractmethod
-    def menu(self):
+    def menu() -> Note:
         pass
 
     @abstractmethod
@@ -12,21 +14,16 @@ class IController(ABC):
         pass
 
     @abstractmethod
-    def edit():
+    def edit() -> tuple[int, str]:
         pass
-
     @abstractmethod
-    def delete():
-        pass
-
-    @abstractmethod
-    def show():
-        pass
-    
-    @abstractmethod
-    def find():
+    def find() -> str:
         pass
 
     @abstractmethod
     def change_language():
+        pass
+    
+    @abstractmethod
+    def empty_list():
         pass

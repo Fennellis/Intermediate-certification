@@ -1,23 +1,31 @@
 from Controller import Controller
-
+from view.ViewEN import ViewEN
+from view.ViewRU import ViewRU
 
 running = True
-ctrl = Controller()
-
+ctrl = Controller({"RU": ViewRU, "EN": ViewEN}, "test.txt")
 while (running):
-    ctrl.Menu()
+    print("\033[H\033[J")
+    ctrl.menu()
     choice = input()
+    print("\033[H\033[J")
 
     match(choice):
         case "1":
-            ctrl.Create()
+            ctrl.create()
         case "2":
-            ctrl.Save()
+            ctrl.edit()
         case "3":
-            ctrl.Show()
+            ctrl.delete()
         case "4":
-            ctrl.Edit()
+            ctrl.find()
+            input()
         case "5":
-            ctrl.Delete()
+            ctrl.show()
+            input()
+        case "6":
+            ctrl.change_language()
         case "0":
             running = False
+            ctrl.print_to()
+            print("\033[H\033[J")
