@@ -18,8 +18,28 @@ class ViewRU(View):
         body = input("Введите текст: ")
         return Note(max_id + 1, title, body)
     
+    def edit() -> tuple[int, str]:
+        print("Выберите изменяемый параметр:\n" +
+              "1. Заголовок\n" +
+              "2. Текст")
+        param = input("-> ")
+        try:
+            param = int(param)
+            if (param != 1 and param != 2):
+                return
+        except ValueError:
+            return
+        print("Введите новое значение:")
+        value = input()
+
+        return (param, value)
+
     def find():
-        pass
+        search = input("Введите фрагмент: ")
+        return search
 
     def change_language():
         print("Доступные языки: ")
+
+    def empty_list():
+        print("Список пуст")

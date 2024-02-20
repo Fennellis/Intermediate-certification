@@ -18,7 +18,8 @@ while (running):
         case "3":
             ctrl.delete()
         case "4":
-            pass
+            ctrl.find()
+            input()
         case "5":
             ctrl.show()
             input()

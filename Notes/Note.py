@@ -1,32 +1,32 @@
 import datetime
 
 class Note:
-    def __init__(self, id, title, body, time = datetime.datetime.now()):
+    def __init__(self, id: int, title, body, time = datetime.datetime.now()):
         self.__id = id
         self.__time = time
         self.__title = title
         self.__body = body
 
     @property
-    def id(self):
+    def id(self) -> int:
         return self.__id
     
     @property
     def time(self):
         return self.__time
-    @property
+    @time.setter
     def time(self, time):
         self.__time = time
     @property
-    def title(self):
+    def title(self) -> str:
         return self.__title
-    @property
+    @title.setter
     def title(self, title):
         self.__title = title
     @property
-    def body(self):
+    def body(self) -> str:
         return self.__body
-    @property
+    @body.setter
     def body(self, body):
         self.__body = body
     
